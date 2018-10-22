@@ -54,7 +54,7 @@ After creating a need to establish a route which Is located `routes/socket.php`
 
 ```php
 //routing is based on an Symfony Routing Component
-$socket->route('/myclass', new MyClass, ['*']);
+$socket->route('/my-route', new MyClass, ['*']);
 ```
 
 To launch the web-socket, use the command:
@@ -71,7 +71,7 @@ php artisan socket:serve
 Connecting Web socket in JavaScript
 
 ```javascript
-var socket = new WebSocket("ws://localhost");
+var socket = new WebSocket("ws://localhost/my-route");
 
 socket.onopen = function() {
   alert("The connection is established.");
